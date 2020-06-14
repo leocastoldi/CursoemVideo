@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Nacionalidade</title>
+</head>
+<body>
+    <h1>Consulta de Nacionalidade</h1>
+    Digite sua Nacionalidade: <input name="txtnac" id="txtnac">
+    <input type= "button" value= "verificar" onclick="Verificar()">
+    <div id='res'>
+
+    </div>
+    <script>
+        function Verificar(){
+            var txtv = window.document.querySelector('input#txtnac')
+            var res = window.document.querySelector('div#res')
+            var nacional = (txtv.value)
+            res.innerHTML = `<p>Sua Nacionalidade é <strong>${nacional}</strong>`
+            if(nacional == 'Brasileiro') {
+                res.innerHTML +=`<p>Você é <strong>Brasileiro</strong>`           
+            } else{
+                res.innerHTML +=`Você é estrangeiro`
+            }
+            res.innerHTML += `<p><strong>Morte</strong> aos Racistas, <strong>FOGO</strong> nos Facistas!<p>`
+            }
+
+
+        
+    </script>
+</body>
+</html>
